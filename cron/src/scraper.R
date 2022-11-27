@@ -29,7 +29,6 @@ get_route<-function(eva){
 }
 
 write_data<-function(data){
-  
   maria_connection <- dbConnect(
     drv = RMariaDB::MariaDB(), 
     username = "Martin",
