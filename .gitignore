@@ -6,3 +6,5 @@
 .httr-oauth
 .DS_Store
 env/
+terraform/tmp/
+terraform/.terraform/
