@@ -1,3 +1,9 @@
+import requests
+import pandas as pd
+import pyarrow as pa
+import pyarrow.parquet as pq
+from datetime import datetime
+
 def get_data(stations):
     # initialize list for results
     results = []
@@ -34,7 +40,7 @@ def save_data(dat):
     table = pa.Table.from_pandas(dat)
 
     # define GCP bucket name and file name
-    bucket_name = "nwb_scraper_calls"
+    bucket_name = "nwb_api_input"
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     file_name = f"nwb_results_{current_time}.parquet"
     
